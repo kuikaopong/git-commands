@@ -212,19 +212,18 @@ test/
    ```
 
 5. **Merge:** To merge the work from `dev-foo` into the master branch, perform these steps:
-   1. go to dev-foo branch
+   1. go to master branch
       ```
-      git checkout dev-foo
+      git checkout master
       ```
-   2. let's merge to master branch
+   2. let merge the dev-foo back into master branch
       ```
-      git merge master
+      git merge dev-foo
       ```
 
 
 6. Describe under what conditions a merge may fail.
-
-
+   if you modify the same part of the same file differently in the two branch you are merging.
 
 
 ## Favorites
