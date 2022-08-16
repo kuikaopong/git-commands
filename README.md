@@ -223,4 +223,4 @@ test/
 
 
 ## Resources
-- [ProGit]https://www.git-scm.com/book/en/v2 "Pro Git online book on Git-scm.com"
+- [ProGit] https://www.git-scm.com/book/en/v2 "Pro Git online book on Git-scm.com"
