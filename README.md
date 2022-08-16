@@ -1,14 +1,10 @@
-  > 6. Verify that your Markdown formatting is correct -- points deducted for bad formatting. VS Code and IntelliJ have markdown previewers. You should also preview it on Github, since Github Markdown is a bit non-standard.
->   *Excellent VS Code Markdown Previewer*: the [Markdown Preview Enhanced][vscode-markdown-preview-enhanced] extension.
-
 ## Using Git
-
-> TODO: Create a table of contents here.  Each line should be a clickable link to each part of this document or another file containing the questions and answers. One item per line.
 
 [Basics](#basics)    
 [Adding and Changing Things](#adding-and-changing-things)    
 [Undo Changes and Recover Files](#undo-changes-and-recover-files)    
 [Viewing Commits](#viewing-commits)    
+[Branch and Merge](#branch-and-merge)
 [Commands for Remotes](remote-commands.md)   
 [Favorites](#favorites)     
 [Resources](#resources)
@@ -56,7 +52,6 @@ test/
     ...
 ```
 
-
 1. Add README.md and *everything* in the `src` directory to the git staging area.
    ```
    git add README.md
@@ -79,7 +74,6 @@ test/
    git rm --cached README.md
    ```
 
-
 5. Commit everything in the staging area to the repository.
    ```
    git commit -m "message"
@@ -94,18 +88,15 @@ test/
    git mv src/*.py .
    ```
 
-
 8. Commit this change with the message "moved src directory":
    ```
    git commit -m "moved src directory"
    ```
 
-
 9. Command to add **all changed files** (but not untracked files) to the staging area using a single command.
    ```
    git add -u .
    ```
-
 
 10. **Delete** the file `c.py` from your working copy **and** the repository:
    ```
@@ -130,18 +121,15 @@ test/
    git diff --stage a.py
    ```
 
-
 4. **Undo "git add":** If `main.py` has been added to the staging area (`git add main.py`), remove it from the staging area:
    ```
    git reset HEAD main.py
    ```
 
-
 5. **Recover a file:** Command to replace your working copy of `a.py` with the most recent (HEAD) version in the repository.  This also works if you have deleted your working copy of this file.
    ```
    git checkout -- a.py
    ```
-
 
 6. **Undo a commit:** Suppose you want to discard some commit(s) and move both HEAD and "master" to an earlier revision (an earlier commit)  Suppose the git commit graph looks like this (`aaaa`, etc, are the commit ids)
    ```
@@ -151,7 +139,6 @@ test/
    ```
    git reset bbbb
    ```
-
 
 7. **Checkout old code:** Using the above example, the command to replace your working copy with the files from commit with id `aaaa`:
    ```
@@ -206,49 +193,35 @@ test/
    ```
    git branch --all
    ```
+
 4. Switch your working copy to the branch named `dev-foo`:
    ```
    git checkout dev-foo
    ```
 
 5. **Merge:** To merge the work from `dev-foo` into the master branch, perform these steps:
+
    1. go to master branch
       ```
       git checkout master
       ```
+
    2. let merge the dev-foo back into master branch
       ```
       git merge dev-foo
       ```
 
-
 6. Describe under what conditions a merge may fail.
+   
    if you modify the same part of the same file differently in the two branch you are merging.
 
 
 ## Favorites
+- Basics  
+- Adding and Changing Things
+- Branch and Merge
 
-> TODO: Add *at least* 1 git task that (a) that you'd like to remember, or (b) you think is really useful, and the git command(s) to do it.
 
-
-
----
 ## Resources
 
-> TODO: Add your favorite Git resources (at least 1)
-
-[Pro Git Online Book][ProGit] Chapters 2 & 3 contain the essentials. Downloadable PDF is also available.     
-[Visual Git Reference](https://marklodato.github.io/visual-git-guide) one page with illustrations of git commands.
-
-Try Git:
-
-[Learn Git Interactive Tutorial][LearnGitInteractive] excellent visual tutorial.   
-[Git Visualizer][VisualizeGit] execute Git commands in a web browser and see the results as a graph.    
-
 [ProGit]: https://www.git-scm.com/book/en/v2 "Pro Git online book on Git-scm.com"
-[ProGitPdf]: https://progit2.s3.amazonaws.com/en/2016-03-22-f3531/progit-en.1084.pdf "Pro Git v.2 PDF on AWS. Longer, book format."
-[LearnGitInteractive]: https://learngitbranching.js.org "Interactive graphical git tutorial"
-[VisualizeGit]: http://git-school.github.io/visualizing-git/ "Online tools draws a graph of commits in a repo as you type"
-[markdown-cheatsheet]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-[github-markdown]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
-[vscode-markdown-preview-enhanced]: https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced
