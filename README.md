@@ -1,6 +1,6 @@
 # Quick Guide to Git
 
-By Your Name
+By Kaopong
 ## Using Git
 
 [Basics](#basics)    
