@@ -1,6 +1,7 @@
 # Quick Guide to Git
 
 By Kaopong
+
 ## Using Git
 
 [Basics](#basics)    
