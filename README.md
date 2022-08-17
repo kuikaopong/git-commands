@@ -1,3 +1,6 @@
+# Quick Guide to Git
+
+By Your Name
 ## Using Git
 
 [Basics](#basics)    
